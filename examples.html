@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Примеры HTML блоков для конструктора</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .example {
+            background: white;
+            margin-bottom: 30px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .example h3 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .example p {
+            color: #666;
+            margin-bottom: 15px;
+        }
+        pre {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            border: 1px solid #e0e0e0;
+        }
+        code {
+            font-family: 'Courier New', monospace;
+            font-size: 13px;
+        }
+        .preview {
+            border: 2px solid #e0e0e0;
+            margin-top: 15px;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        h1 {
+            text-align: center;
+            color: #667eea;
+        }
+    </style>
+</head>
+<body>
+    <h1>📧 Примеры HTML блоков</h1>
+    <p style="text-align: center; color: #666; margin-bottom: 40px;">
+        Скопируйте эти блоки и добавьте их в конструктор через режим администратора
+    </p>
+
+    <div class="example">
+        <h3>1. Заголовок с градиентом</h3>
+        <p>Яркий заголовочный блок с градиентным фоном</p>
+        <pre><code>&lt;div style="text-align: center; padding: 40px 20px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;"&gt;
+    &lt;h1 style="margin: 0; font-size: 32px; font-weight: bold;" data-editable="text"&gt;Добро пожаловать!&lt;/h1&gt;
+&lt;/div&gt;</code></pre>
+        <div class="preview">
+            <div style="text-align: center; padding: 40px 20px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
+                <h1 style="margin: 0; font-size: 32px; font-weight: bold;">Добро пожаловать!</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="example">
+        <h3>2. Текстовый блок</h3>
+        <p>Простой текстовый блок с редактируемым содержимым</p>
+        <pre><code>&lt;div style="padding: 30px 20px; background: #ffffff;"&gt;
+    &lt;p style="margin: 0; font-size: 16px; line-height: 1.6; color: #333;" data-editable="text"&gt;
+        Это текстовый блок. Вы можете редактировать этот текст по своему усмотрению.
+    &lt;/p&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+
+    <div class="example">
+        <h3>3. Кнопка с призывом к действию</h3>
+        <p>Кнопка с редактируемым текстом и ссылкой</p>
+        <pre><code>&lt;div style="text-align: center; padding: 30px 20px; background: #f8f9fa;"&gt;
+    &lt;a href="https://example.com" 
+       style="display: inline-block; padding: 15px 40px; background: #667eea; color: white; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 16px;" 
+       data-editable="text" 
+       data-editable-href="href"&gt;
+        Нажми меня
+    &lt;/a&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+
+    <div class="example">
+        <h3>4. Изображение с подписью</h3>
+        <p>Блок изображения с редактируемым URL</p>
+        <pre><code>&lt;div style="padding: 20px; text-align: center; background: #ffffff;"&gt;
+    &lt;img src="https://via.placeholder.com/600x300" 
+         alt="Изображение" 
+         style="max-width: 100%; height: auto; border-radius: 8px;" 
+         data-editable-src="src" /&gt;
+    &lt;p style="margin-top: 10px; color: #666; font-size: 14px;" data-editable="text"&gt;Подпись к изображению&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+
+    <div class="example">
+        <h3>5. Две колонки</h3>
+        <p>Макет из двух колонок для размещения контента рядом</p>
+        <pre><code>&lt;div style="padding: 30px 20px; background: #ffffff;"&gt;
+    &lt;table width="100%" cellpadding="0" cellspacing="0"&gt;
+        &lt;tr&gt;
+            &lt;td width="48%" style="padding: 15px; background: #f8f9fa; border-radius: 8px; vertical-align: top;"&gt;
+                &lt;h3 style="margin: 0 0 10px 0; color: #333; font-size: 20px;" data-editable="text"&gt;Левая колонка&lt;/h3&gt;
+                &lt;p style="margin: 0; color: #666; font-size: 14px; line-height: 1.6;" data-editable="text"&gt;Текст левой колонки&lt;/p&gt;
+            &lt;/td&gt;
+            &lt;td width="4%"&gt;&lt;/td&gt;
+            &lt;td width="48%" style="padding: 15px; background: #f8f9fa; border-radius: 8px; vertical-align: top;"&gt;
+                &lt;h3 style="margin: 0 0 10px 0; color: #333; font-size: 20px;" data-editable="text"&gt;Правая колонка&lt;/h3&gt;
+                &lt;p style="margin: 0; color: #666; font-size: 14px; line-height: 1.6;" data-editable="text"&gt;Текст правой колонки&lt;/p&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/table&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+
+    <div class="example">
+        <h3>6. Блок с иконкой и текстом</h3>
+        <p>Блок с эмодзи-иконкой и описанием</p>
+        <pre><code>&lt;div style="padding: 25px 20px; background: #ffffff; text-align: center;"&gt;
+    &lt;div style="font-size: 48px; margin-bottom: 15px;"&gt;🎉&lt;/div&gt;
+    &lt;h3 style="margin: 0 0 10px 0; color: #333; font-size: 22px;" data-editable="text"&gt;Специальное предложение!&lt;/h3&gt;
+    &lt;p style="margin: 0; color: #666; font-size: 16px; line-height: 1.6;" data-editable="text"&gt;Не упустите возможность получить скидку 50%&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+
+    <div class="example">
+        <h3>7. Блок с цитатой</h3>
+        <p>Красивая цитата с рамкой</p>
+        <pre><code>&lt;div style="padding: 30px 20px; background: #ffffff;"&gt;
+    &lt;div style="border-left: 4px solid #667eea; padding-left: 20px; font-style: italic;"&gt;
+        &lt;p style="margin: 0 0 10px 0; font-size: 18px; color: #333; line-height: 1.6;" data-editable="text"&gt;
+            "Успех - это способность идти от одной неудачи к другой, не теряя энтузиазма."
+        &lt;/p&gt;
+        &lt;p style="margin: 0; font-size: 14px; color: #999;" data-editable="text"&gt;— Уинстон Черчилль&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+
+    <div class="example">
+        <h3>8. Карточка продукта</h3>
+        <p>Блок для демонстрации продукта с изображением, описанием и кнопкой</p>
+        <pre><code>&lt;div style="padding: 30px 20px; background: #f8f9fa;"&gt;
+    &lt;table width="100%" cellpadding="0" cellspacing="0"&gt;
+        &lt;tr&gt;
+            &lt;td width="40%" style="padding-right: 20px;"&gt;
+                &lt;img src="https://via.placeholder.com/200x200" 
+                     alt="Продукт" 
+                     style="width: 100%; height: auto; border-radius: 8px;" 
+                     data-editable-src="src" /&gt;
+            &lt;/td&gt;
+            &lt;td width="60%" style="vertical-align: top;"&gt;
+                &lt;h3 style="margin: 0 0 10px 0; color: #333; font-size: 20px;" data-editable="text"&gt;Название продукта&lt;/h3&gt;
+                &lt;p style="margin: 0 0 15px 0; color: #666; font-size: 14px; line-height: 1.6;" data-editable="text"&gt;
+                    Краткое описание продукта и его основных преимуществ.
+                &lt;/p&gt;
+                &lt;a href="https://example.com" 
+                   style="display: inline-block; padding: 10px 25px; background: #667eea; color: white; text-decoration: none; border-radius: 5px; font-size: 14px;" 
+                   data-editable="text" 
+                   data-editable-href="href"&gt;
+                    Подробнее
+                &lt;/a&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/table&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+
+    <div class="example">
+        <h3>9. Социальные сети</h3>
+        <p>Блок со ссылками на социальные сети</p>
+        <pre><code>&lt;div style="text-align: center; padding: 30px 20px; background: #ffffff;"&gt;
+    &lt;p style="margin: 0 0 15px 0; color: #333; font-size: 16px; font-weight: bold;"&gt;Следите за нами:&lt;/p&gt;
+    &lt;a href="https://facebook.com" style="display: inline-block; margin: 0 10px; font-size: 32px; text-decoration: none;" data-editable-href="href"&gt;📘&lt;/a&gt;
+    &lt;a href="https://twitter.com" style="display: inline-block; margin: 0 10px; font-size: 32px; text-decoration: none;" data-editable-href="href"&gt;🐦&lt;/a&gt;
+    &lt;a href="https://instagram.com" style="display: inline-block; margin: 0 10px; font-size: 32px; text-decoration: none;" data-editable-href="href"&gt;📷&lt;/a&gt;
+    &lt;a href="https://linkedin.com" style="display: inline-block; margin: 0 10px; font-size: 32px; text-decoration: none;" data-editable-href="href"&gt;💼&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+
+    <div class="example">
+        <h3>10. Футер с контактами</h3>
+        <p>Футер письма с контактной информацией и ссылкой на отписку</p>
+        <pre><code>&lt;div style="text-align: center; padding: 30px 20px; background: #2c3e50; color: white;"&gt;
+    &lt;p style="margin: 0 0 10px 0; font-size: 14px;" data-editable="text"&gt;© 2025 Ваша Компания. Все права защищены.&lt;/p&gt;
+    &lt;p style="margin: 0 0 15px 0; font-size: 12px; color: #95a5a6;" data-editable="text"&gt;
+        Email: info@example.com | Телефон: +7 (123) 456-78-90
+    &lt;/p&gt;
+    &lt;a href="https://example.com/unsubscribe" 
+       style="color: #95a5a6; font-size: 11px; text-decoration: underline;" 
+       data-editable="text" 
+       data-editable-href="href"&gt;
+        Отписаться от рассылки
+    &lt;/a&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+
+    <div class="example">
+        <h3>11. Таймер обратного отсчета (статичный)</h3>
+        <p>Блок с визуальным отображением срочности предложения</p>
+        <pre><code>&lt;div style="padding: 30px 20px; background: #fff3cd; text-align: center;"&gt;
+    &lt;p style="margin: 0 0 15px 0; color: #856404; font-size: 18px; font-weight: bold;" data-editable="text"&gt;
+        ⏰ Предложение действует ограниченное время!
+    &lt;/p&gt;
+    &lt;table width="100%" cellpadding="0" cellspacing="0"&gt;
+        &lt;tr&gt;
+            &lt;td width="25%" style="text-align: center;"&gt;
+                &lt;div style="display: inline-block; padding: 15px 20px; background: white; border-radius: 8px;"&gt;
+                    &lt;div style="font-size: 28px; font-weight: bold; color: #667eea;" data-editable="text"&gt;03&lt;/div&gt;
+                    &lt;div style="font-size: 12px; color: #666;"&gt;ДНИ&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/td&gt;
+            &lt;td width="25%" style="text-align: center;"&gt;
+                &lt;div style="display: inline-block; padding: 15px 20px; background: white; border-radius: 8px;"&gt;
+                    &lt;div style="font-size: 28px; font-weight: bold; color: #667eea;" data-editable="text"&gt;12&lt;/div&gt;
+                    &lt;div style="font-size: 12px; color: #666;"&gt;ЧАСОВ&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/td&gt;
+            &lt;td width="25%" style="text-align: center;"&gt;
+                &lt;div style="display: inline-block; padding: 15px 20px; background: white; border-radius: 8px;"&gt;
+                    &lt;div style="font-size: 28px; font-weight: bold; color: #667eea;" data-editable="text"&gt;45&lt;/div&gt;
+                    &lt;div style="font-size: 12px; color: #666;"&gt;МИНУТ&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/td&gt;
+            &lt;td width="25%" style="text-align: center;"&gt;
+                &lt;div style="display: inline-block; padding: 15px 20px; background: white; border-radius: 8px;"&gt;
+                    &lt;div style="font-size: 28px; font-weight: bold; color: #667eea;" data-editable="text"&gt;30&lt;/div&gt;
+                    &lt;div style="font-size: 12px; color: #666;"&gt;СЕКУНД&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/table&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+
+    <div class="example">
+        <h3>12. Список с иконками</h3>
+        <p>Список преимуществ или особенностей</p>
+        <pre><code>&lt;div style="padding: 30px 20px; background: #ffffff;"&gt;
+    &lt;h3 style="margin: 0 0 20px 0; color: #333; font-size: 22px; text-align: center;" data-editable="text"&gt;Наши преимущества&lt;/h3&gt;
+    &lt;table width="100%" cellpadding="0" cellspacing="0"&gt;
+        &lt;tr&gt;
+            &lt;td style="padding: 10px 0;"&gt;
+                &lt;span style="font-size: 24px; margin-right: 10px;"&gt;✓&lt;/span&gt;
+                &lt;span style="color: #333; font-size: 16px;" data-editable="text"&gt;Бесплатная доставка&lt;/span&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td style="padding: 10px 0;"&gt;
+                &lt;span style="font-size: 24px; margin-right: 10px;"&gt;✓&lt;/span&gt;
+                &lt;span style="color: #333; font-size: 16px;" data-editable="text"&gt;Гарантия качества&lt;/span&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td style="padding: 10px 0;"&gt;
+                &lt;span style="font-size: 24px; margin-right: 10px;"&gt;✓&lt;/span&gt;
+                &lt;span style="color: #333; font-size: 16px;" data-editable="text"&gt;Поддержка 24/7&lt;/span&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td style="padding: 10px 0;"&gt;
+                &lt;span style="font-size: 24px; margin-right: 10px;"&gt;✓&lt;/span&gt;
+                &lt;span style="color: #333; font-size: 16px;" data-editable="text"&gt;Легкий возврат&lt;/span&gt;
+            &lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/table&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+
+    <p style="text-align: center; margin-top: 50px; color: #666;">
+        💡 <strong>Совет:</strong> Все блоки используют inline-стили для максимальной совместимости с почтовыми клиентами
+    </p>
+</body>
+</html>
+
