@@ -7,12 +7,44 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
+    <!-- Экран входа -->
+    <div id="loginScreen" class="login-screen">
+        <div class="login-container">
+            <h1>🔐 Вход в систему</h1>
+            <p class="login-subtitle">Выберите роль и введите пароль</p>
+            
+            <div class="role-selector">
+                <button class="role-btn active" data-role="user">
+                    <span class="role-icon">👤</span>
+                    <span class="role-name">Пользователь</span>
+                </button>
+                <button class="role-btn" data-role="admin">
+                    <span class="role-icon">👨‍💼</span>
+                    <span class="role-name">Администратор</span>
+                </button>
+            </div>
+            
+            <div class="login-form">
+                <input type="password" id="passwordInput" placeholder="Введите пароль" />
+                <button id="loginBtn" class="btn-primary">Войти</button>
+                <p class="login-error hidden" id="loginError">Неверный пароль</p>
+            </div>
+            
+            <div class="login-hint">
+                <p>💡 Подсказка:</p>
+                <p>Пользователь: <code>user-m2</code></p>
+                <p>Администратор: <code>admin-m2</code></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container hidden" id="mainApp">
         <header>
             <h1>📧 Конструктор HTML писем</h1>
             <div class="mode-switcher">
                 <button id="adminMode" class="mode-btn">Режим администратора</button>
                 <button id="userMode" class="mode-btn active">Режим пользователя</button>
+                <button id="logoutBtn" class="mode-btn logout-btn">🚪 Выход</button>
             </div>
         </header>
 
