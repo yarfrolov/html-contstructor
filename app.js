@@ -76,6 +76,36 @@ function loadDefaultBlocks() {
                 id: generateId(),
                 name: 'Футер',
                 html: '<table width="100%" cellpadding="0" cellspacing="0" border="0" style="background: #2c3e50;"><tr><td style="padding: 30px 20px; text-align: center;"><p style="margin: 0 0 10px 0; font-size: 14px; color: white;" data-editable="text">© 2025 Ваша Компания. Все права защищены.</p><p style="margin: 0; font-size: 12px; color: #95a5a6;" data-editable="text">Email: info@example.com | Телефон: +7 (123) 456-78-90</p></td></tr></table>'
+            },
+            {
+                id: generateId(),
+                name: 'М2: Приветственный заголовок',
+                html: '<table width="100%" cellpadding="0" cellspacing="0" border="0" style="background: #ffffff;"><tr><td align="center" style="padding: 0 20px"><table cellspacing="0" cellpadding="0" width="100%" role="presentation" style="max-width: 520px"><tbody><tr><td><h1 style="font-size: 28px; margin-bottom: 0px; margin-top: 0px; padding-top: 0px; font-weight: 600;" data-editable="text">Привет<strong style="color:#5F37EB"> Username,</strong></h1><p style="line-height: 140%; margin-bottom: 20px; margin-block-start: 0.25rem;" data-editable="text">С сегодняшнего дня ты — часть команды М2. Ура!</p></td></tr></tbody></table></td></tr></table>'
+            },
+            {
+                id: generateId(),
+                name: 'М2: Заголовок с хронологией',
+                html: '<table width="100%" cellpadding="0" cellspacing="0" border="0" style="background: #ffffff;"><tr><td align="center" style="padding: 0 20px"><table cellspacing="0" cellpadding="0" width="100%" role="presentation" style="max-width: 520px"><tbody><tr><td><h2 style="font-size: 22px; margin-bottom: 1.25rem; font-weight: 600;" data-editable="text">Что тебя ждёт в ближайшие три месяца</h2></td></tr></tbody></table></td></tr></table>'
+            },
+            {
+                id: generateId(),
+                name: 'М2: Текстовый блок адаптации',
+                html: '<table width="100%" cellpadding="0" cellspacing="0" border="0" style="background: #ffffff;"><tr><td align="center" style="padding: 0 20px"><table cellspacing="0" cellpadding="0" width="100%" role="presentation" style="max-width: 520px"><tbody><tr><td><p style="padding: 0px 0px 4px 0px;" data-editable="text"><strong style="color: #5F37EB;">В первый день</strong> ты подпишешь трудовой договор, получишь оборудование, почтовый аккаунт, личную страницу на портале, необходимые доступы и станешь участником рабочих чатов</p><p style="padding: 0px 0px 4px 0px;" data-editable="text"><strong style="color: #5F37EB;">В течение первой недели</strong> познакомишься с командой и получишь задачи на испытательный срок от руководителя. А коллеги из команды обучения пришлют тебе приглашение в календарь на welcome-встречу, где ты узнаешь ещё больше о М2.</p></td></tr></tbody></table></td></tr></table>'
+            },
+            {
+                id: generateId(),
+                name: 'М2: Основной контент',
+                html: '<table width="100%" cellpadding="0" cellspacing="0" border="0" style="background: #ffffff;"><tr><td align="center" style="padding: 0 20px"><table cellspacing="0" cellpadding="0" width="100%" role="presentation" style="max-width: 520px"><tbody><tr><td><h2 style="font-size: 22px; margin-bottom: 1.25rem; font-weight: 600;" data-editable="text">Что ещё важно сделать?</h2></td></tr><tr><td><p style="padding-bottom:4px;" data-editable="text"><strong style="color: #5F37EB;">Перейди на портал</strong><br>Для входа используй данные от почтового аккаунта. Обрати внимание, портал доступен только из внутренней сети.</p><p data-editable="text"><strong style="color: #5F37EB;">Изучи <a href="https://portal.m2.ru/university/learning/course.php?COURSE_ID=33&INDEX=Y" style="color: #5F37EB;" data-editable-href="href"> курс по адаптации «Лёгкий старт»</a></strong><br>В нём много полезной информации о М2, наших процессах, зарплатном проекте и других важных особенностях работы в компании. Если у тебя остались какие-то вопросы, смело задавай их своему HR или руководителю. Они обязательно ответят или направят тебя к тому, кто сможет помочь.</p></td></tr></tbody></table></td></tr></table>'
+            },
+            {
+                id: generateId(),
+                name: 'М2: Подпись HR',
+                html: '<table width="100%" cellpadding="0" cellspacing="0" border="0" style="background: #ffffff;"><tr><td align="center" style="padding: 0 20px"><table cellspacing="0" cellpadding="0" width="100%" role="presentation" style="max-width: 520px"><tbody><tr><td><p data-editable="text">Рады, что ты с нами, желаем отличного старта!<br><strong>Добро пожаловать в М2</strong></p><p style="padding-top: 16px;" data-editable="text">Твоя команда HR</p></td></tr></tbody></table></td></tr></table>'
+            },
+            {
+                id: generateId(),
+                name: 'М2: Фиолетовая кнопка',
+                html: '<table width="100%" cellpadding="0" cellspacing="0" border="0" style="background: #ffffff;"><tr><td style="padding: 30px 20px; text-align: center;"><a href="https://portal.m2.ru" style="display: inline-block; padding: 12px 25px; background: #5F37EB; color: white; text-decoration: none; border-radius: 5px; font-weight: bold; font-size: 20px; border: solid 1px #9173FA; box-sizing: border-box;" data-editable="text" data-editable-href="href">Перейти на портал</a></td></tr></table>'
             }
         ];
         saveBlocksToStorage();
