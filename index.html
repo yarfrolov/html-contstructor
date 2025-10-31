@@ -53,13 +53,22 @@
             <h2>Панель администратора</h2>
             <div class="admin-section">
                 <div class="upload-area">
-                    <h3>Добавить новый блок</h3>
+                    <h3 id="adminFormTitle">Добавить новый блок</h3>
+                    <div id="editingIndicator" class="editing-indicator hidden">
+                        <span>✏️ Режим редактирования</span>
+                        <button onclick="cancelEditBlock()" class="btn-cancel-edit">Отменить</button>
+                    </div>
                     <input type="text" id="blockName" placeholder="Название блока (например, Заголовок)">
-                    <textarea id="blockHTML" placeholder="Вставьте HTML код блока..."></textarea>
+                    <div class="code-editor-container">
+                        <textarea id="blockHTML" placeholder="Вставьте HTML код блока..." spellcheck="false"></textarea>
+                    </div>
                     <button id="addBlock" class="btn-primary">Добавить блок</button>
                 </div>
                 <div class="blocks-library">
-                    <h3>Библиотека блоков</h3>
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                        <h3 style="margin: 0;">Библиотека блоков</h3>
+                        <button onclick="resetToDefaultBlocks()" class="btn-reset" title="Восстановить блоки по умолчанию">🔄 Сбросить</button>
+                    </div>
                     <div id="adminBlocksList"></div>
                 </div>
             </div>
@@ -94,6 +103,10 @@
                 <!-- Правая панель - редактор -->
                 <div class="editor-panel hidden">
                     <h3>Редактор блока</h3>
+                    <div class="editor-mode-switcher">
+                        <button class="editor-mode-btn active" data-mode="visual">👁️ Визуальный</button>
+                        <button class="editor-mode-btn" data-mode="code">💻 Код</button>
+                    </div>
                     <div id="editorContent"></div>
                     <button id="closeEditor" class="btn-secondary">Закрыть</button>
                 </div>
@@ -128,6 +141,9 @@
             </div>
         </div>
     </div>
+
+    <!-- Скрытое модальное окно для отслеживания режима редактирования -->
+    <div id="editBlockModal" class="hidden" data-editing-id=""></div>
 
     <script src="app.js"></script>
 </body>

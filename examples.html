@@ -58,54 +58,125 @@
 
     <div class="example">
         <h3>1. Заголовок с градиентом</h3>
-        <p>Яркий заголовочный блок с градиентным фоном</p>
-        <pre><code>&lt;div style="text-align: center; padding: 40px 20px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;"&gt;
-    &lt;h1 style="margin: 0; font-size: 32px; font-weight: bold;" data-editable="text"&gt;Добро пожаловать!&lt;/h1&gt;
-&lt;/div&gt;</code></pre>
+        <p>Яркий заголовочный блок с градиентным фоном (табличная верстка)</p>
+        <pre><code>&lt;table width="100%" cellpadding="0" cellspacing="0" border="0" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);"&gt;
+    &lt;tr&gt;
+        &lt;td style="padding: 40px 20px; text-align: center;"&gt;
+            &lt;h1 style="font-size: 24px; margin: 0 0 1.25rem 0; font-weight: 600; color: white;" data-editable="text"&gt;Привет!&lt;/h1&gt;
+        &lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
         <div class="preview">
-            <div style="text-align: center; padding: 40px 20px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
-                <h1 style="margin: 0; font-size: 32px; font-weight: bold;">Добро пожаловать!</h1>
-            </div>
+            <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                <tr>
+                    <td style="padding: 40px 20px; text-align: center;">
+                        <h1 style="font-size: 24px; margin: 0 0 1.25rem 0; font-weight: 600; color: white;">Привет!</h1>
+                    </td>
+                </tr>
+            </table>
         </div>
     </div>
 
     <div class="example">
-        <h3>2. Текстовый блок</h3>
-        <p>Простой текстовый блок с редактируемым содержимым</p>
-        <pre><code>&lt;div style="padding: 30px 20px; background: #ffffff;"&gt;
-    &lt;p style="margin: 0; font-size: 16px; line-height: 1.6; color: #333;" data-editable="text"&gt;
-        Это текстовый блок. Вы можете редактировать этот текст по своему усмотрению.
-    &lt;/p&gt;
-&lt;/div&gt;</code></pre>
+        <h3>2. Подзаголовок</h3>
+        <p>Вспомогательный заголовок с дополнительной информацией (табличная верстка)</p>
+        <pre><code>&lt;table width="100%" cellpadding="0" cellspacing="0" border="0" style="background: #ffffff;"&gt;
+    &lt;tr&gt;
+        &lt;td style="padding: 20px 20px 30px 20px; text-align: center;"&gt;
+            &lt;h2 style="margin: 0; font-size: 24px; font-weight: 600; color: #667eea;" data-editable="text"&gt;Ваш успех начинается здесь&lt;/h2&gt;
+            &lt;p style="margin: 10px 0 0 0; font-size: 14px; color: #999; font-style: italic;" data-editable="text"&gt;Присоединяйтесь к тысячам довольных пользователей&lt;/p&gt;
+        &lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+        <div class="preview">
+            <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background: #ffffff;">
+                <tr>
+                    <td style="padding: 20px 20px 30px 20px; text-align: center;">
+                        <h2 style="margin: 0; font-size: 24px; font-weight: 600; color: #667eea;">Ваш успех начинается здесь</h2>
+                        <p style="margin: 10px 0 0 0; font-size: 14px; color: #999; font-style: italic;">Присоединяйтесь к тысячам довольных пользователей</p>
+                    </td>
+                </tr>
+            </table>
+        </div>
     </div>
 
     <div class="example">
-        <h3>3. Кнопка с призывом к действию</h3>
-        <p>Кнопка с редактируемым текстом и ссылкой</p>
-        <pre><code>&lt;div style="text-align: center; padding: 30px 20px; background: #f8f9fa;"&gt;
-    &lt;a href="https://example.com" 
-       style="display: inline-block; padding: 15px 40px; background: #667eea; color: white; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 16px;" 
-       data-editable="text" 
-       data-editable-href="href"&gt;
-        Нажми меня
-    &lt;/a&gt;
-&lt;/div&gt;</code></pre>
+        <h3>3. Текстовый блок</h3>
+        <p>Простой текстовый блок с редактируемым содержимым (табличная верстка)</p>
+        <pre><code>&lt;table width="100%" cellpadding="0" cellspacing="0" border="0" style="background: #ffffff;"&gt;
+    &lt;tr&gt;
+        &lt;td style="padding: 30px 20px;"&gt;
+            &lt;p style="line-height: 140%; margin: 0 0 1rem 0;" data-editable="text"&gt;
+                Поздравляем с успешным прохождением испытательного срока!
+            &lt;/p&gt;
+        &lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+        <div class="preview">
+            <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background: #ffffff;">
+                <tr>
+                    <td style="padding: 30px 20px;">
+                        <p style="line-height: 140%; margin: 0 0 1rem 0;">Поздравляем с успешным прохождением испытательного срока!</p>
+                    </td>
+                </tr>
+            </table>
+        </div>
     </div>
 
     <div class="example">
-        <h3>4. Изображение с подписью</h3>
-        <p>Блок изображения с редактируемым URL</p>
-        <pre><code>&lt;div style="padding: 20px; text-align: center; background: #ffffff;"&gt;
-    &lt;img src="https://via.placeholder.com/600x300" 
-         alt="Изображение" 
-         style="max-width: 100%; height: auto; border-radius: 8px;" 
-         data-editable-src="src" /&gt;
-    &lt;p style="margin-top: 10px; color: #666; font-size: 14px;" data-editable="text"&gt;Подпись к изображению&lt;/p&gt;
-&lt;/div&gt;</code></pre>
+        <h3>4. Кнопка с призывом к действию</h3>
+        <p>Кнопка с редактируемым текстом и ссылкой (табличная верстка)</p>
+        <pre><code>&lt;table width="100%" cellpadding="0" cellspacing="0" border="0" style="background: #f8f9fa;"&gt;
+    &lt;tr&gt;
+        &lt;td style="padding: 30px 20px; text-align: center;"&gt;
+            &lt;a href="https://example.com" 
+               style="display: inline-block; padding: 15px 40px; background: #667eea; color: white; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 16px;" 
+               data-editable="text" 
+               data-editable-href="href"&gt;
+                Нажми меня
+            &lt;/a&gt;
+        &lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+        <div class="preview">
+            <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background: #f8f9fa;">
+                <tr>
+                    <td style="padding: 30px 20px; text-align: center;">
+                        <a href="https://example.com" style="display: inline-block; padding: 15px 40px; background: #667eea; color: white; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 16px;">Нажми меня</a>
+                    </td>
+                </tr>
+            </table>
+        </div>
     </div>
 
     <div class="example">
-        <h3>5. Две колонки</h3>
+        <h3>5. Изображение с подписью</h3>
+        <p>Блок изображения с редактируемым URL (табличная верстка, поддержка base64)</p>
+        <pre><code>&lt;table width="100%" cellpadding="0" cellspacing="0" border="0" style="background: #ffffff;"&gt;
+    &lt;tr&gt;
+        &lt;td style="padding: 20px; text-align: center;"&gt;
+            &lt;img src="https://via.placeholder.com/600x300" 
+                 alt="Изображение" 
+                 style="max-width: 100%; height: auto; border-radius: 8px; display: block; margin: 0 auto;" 
+                 data-editable-src="src" /&gt;
+            &lt;p style="margin-top: 10px; color: #666; font-size: 14px;" data-editable="text"&gt;Подпись к изображению&lt;/p&gt;
+        &lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+        <div class="preview">
+            <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background: #ffffff;">
+                <tr>
+                    <td style="padding: 20px; text-align: center;">
+                        <img src="https://via.placeholder.com/600x300" alt="Изображение" style="max-width: 100%; height: auto; border-radius: 8px; display: block; margin: 0 auto;" />
+                        <p style="margin-top: 10px; color: #666; font-size: 14px;">Подпись к изображению</p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="example">
+        <h3>6. Две колонки</h3>
         <p>Макет из двух колонок для размещения контента рядом</p>
         <pre><code>&lt;div style="padding: 30px 20px; background: #ffffff;"&gt;
     &lt;table width="100%" cellpadding="0" cellspacing="0"&gt;
@@ -125,7 +196,7 @@
     </div>
 
     <div class="example">
-        <h3>6. Блок с иконкой и текстом</h3>
+        <h3>7. Блок с иконкой и текстом</h3>
         <p>Блок с эмодзи-иконкой и описанием</p>
         <pre><code>&lt;div style="padding: 25px 20px; background: #ffffff; text-align: center;"&gt;
     &lt;div style="font-size: 48px; margin-bottom: 15px;"&gt;🎉&lt;/div&gt;
@@ -135,7 +206,7 @@
     </div>
 
     <div class="example">
-        <h3>7. Блок с цитатой</h3>
+        <h3>8. Блок с цитатой</h3>
         <p>Красивая цитата с рамкой</p>
         <pre><code>&lt;div style="padding: 30px 20px; background: #ffffff;"&gt;
     &lt;div style="border-left: 4px solid #667eea; padding-left: 20px; font-style: italic;"&gt;
@@ -148,7 +219,7 @@
     </div>
 
     <div class="example">
-        <h3>8. Карточка продукта</h3>
+        <h3>9. Карточка продукта</h3>
         <p>Блок для демонстрации продукта с изображением, описанием и кнопкой</p>
         <pre><code>&lt;div style="padding: 30px 20px; background: #f8f9fa;"&gt;
     &lt;table width="100%" cellpadding="0" cellspacing="0"&gt;
@@ -177,7 +248,7 @@
     </div>
 
     <div class="example">
-        <h3>9. Социальные сети</h3>
+        <h3>10. Социальные сети</h3>
         <p>Блок со ссылками на социальные сети</p>
         <pre><code>&lt;div style="text-align: center; padding: 30px 20px; background: #ffffff;"&gt;
     &lt;p style="margin: 0 0 15px 0; color: #333; font-size: 16px; font-weight: bold;"&gt;Следите за нами:&lt;/p&gt;
@@ -189,7 +260,7 @@
     </div>
 
     <div class="example">
-        <h3>10. Футер с контактами</h3>
+        <h3>11. Футер с контактами</h3>
         <p>Футер письма с контактной информацией и ссылкой на отписку</p>
         <pre><code>&lt;div style="text-align: center; padding: 30px 20px; background: #2c3e50; color: white;"&gt;
     &lt;p style="margin: 0 0 10px 0; font-size: 14px;" data-editable="text"&gt;© 2025 Ваша Компания. Все права защищены.&lt;/p&gt;
@@ -206,7 +277,7 @@
     </div>
 
     <div class="example">
-        <h3>11. Таймер обратного отсчета (статичный)</h3>
+        <h3>12. Таймер обратного отсчета (статичный)</h3>
         <p>Блок с визуальным отображением срочности предложения</p>
         <pre><code>&lt;div style="padding: 30px 20px; background: #fff3cd; text-align: center;"&gt;
     &lt;p style="margin: 0 0 15px 0; color: #856404; font-size: 18px; font-weight: bold;" data-editable="text"&gt;
@@ -244,7 +315,7 @@
     </div>
 
     <div class="example">
-        <h3>12. Список с иконками</h3>
+        <h3>13. Список с иконками</h3>
         <p>Список преимуществ или особенностей</p>
         <pre><code>&lt;div style="padding: 30px 20px; background: #ffffff;"&gt;
     &lt;h3 style="margin: 0 0 20px 0; color: #333; font-size: 22px; text-align: center;" data-editable="text"&gt;Наши преимущества&lt;/h3&gt;
@@ -278,7 +349,7 @@
     </div>
 
     <p style="text-align: center; margin-top: 50px; color: #666;">
-        💡 <strong>Совет:</strong> Все блоки используют inline-стили для максимальной совместимости с почтовыми клиентами
+        💡 <strong>Совет:</strong> Все 13 блоков используют inline-стили для максимальной совместимости с почтовыми клиентами
     </p>
 </body>
 </html>
