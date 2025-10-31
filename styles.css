@@ -411,6 +411,40 @@ header h1 {
     transform: translateY(-1px);
 }
 
+.btn-export {
+    padding: 8px 16px;
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.btn-export:hover {
+    background: #218838;
+    transform: translateY(-1px);
+}
+
+.btn-import {
+    padding: 8px 16px;
+    background: #17a2b8;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.btn-import:hover {
+    background: #138496;
+    transform: translateY(-1px);
+}
+
 /* Панель пользователя */
 .workspace {
     display: grid;

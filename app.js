@@ -93,6 +93,97 @@ function resetToDefaultBlocks() {
     alert('Блоки успешно восстановлены к значениям по умолчанию!');
 }
 
+// Экспорт блоков в JSON файл
+function exportBlocks() {
+    if (blocks.length === 0) {
+        alert('Нет блоков для экспорта');
+        return;
+    }
+    
+    const dataStr = JSON.stringify(blocks, null, 2);
+    const dataBlob = new Blob([dataStr], { type: 'application/json' });
+    const url = URL.createObjectURL(dataBlob);
+    
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = `email-blocks-${new Date().toISOString().split('T')[0]}.json`;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    URL.revokeObjectURL(url);
+    
+    alert('Блоки успешно экспортированы!');
+}
+
+// Импорт блоков из JSON файла
+function importBlocks(event) {
+    const file = event.target.files[0];
+    if (!file) return;
+    
+    if (!file.name.endsWith('.json')) {
+        alert('Пожалуйста, выберите JSON файл');
+        event.target.value = '';
+        return;
+    }
+    
+    const reader = new FileReader();
+    reader.onload = function(e) {
+        try {
+            const importedBlocks = JSON.parse(e.target.result);
+            
+            if (!Array.isArray(importedBlocks)) {
+                throw new Error('Неверный формат данных');
+            }
+            
+            // Проверяем структуру блоков
+            const isValid = importedBlocks.every(block => 
+                block.id && block.name && block.html
+            );
+            
+            if (!isValid) {
+                throw new Error('Некоторые блоки имеют неверную структуру');
+            }
+            
+            // Спрашиваем пользователя, как импортировать
+            const action = confirm(
+                `Найдено ${importedBlocks.length} блоков.\n\n` +
+                'OK - Заменить все существующие блоки\n' +
+                'Отмена - Добавить к существующим блокам'
+            );
+            
+            if (action) {
+                // Заменить все блоки
+                blocks = importedBlocks;
+            } else {
+                // Добавить к существующим, обновляя ID для избежания конфликтов
+                importedBlocks.forEach(block => {
+                    block.id = generateId();
+                    blocks.push(block);
+                });
+            }
+            
+            saveBlocksToStorage();
+            renderAdminBlocks();
+            renderAvailableBlocks();
+            
+            alert(`Успешно импортировано ${importedBlocks.length} блоков!`);
+            
+        } catch (error) {
+            alert('Ошибка импорта: ' + error.message);
+        }
+        
+        // Очищаем input для возможности повторного импорта того же файла
+        event.target.value = '';
+    };
+    
+    reader.onerror = function() {
+        alert('Ошибка чтения файла');
+        event.target.value = '';
+    };
+    
+    reader.readAsText(file);
+}
+
 // Сохранение блоков в localStorage
 function saveBlocksToStorage() {
     localStorage.setItem('emailBlocks', JSON.stringify(blocks));

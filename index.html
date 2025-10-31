@@ -67,8 +67,13 @@
                 <div class="blocks-library">
                     <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
                         <h3 style="margin: 0;">Библиотека блоков</h3>
-                        <button onclick="resetToDefaultBlocks()" class="btn-reset" title="Восстановить блоки по умолчанию">🔄 Сбросить</button>
+                        <div style="display: flex; gap: 10px;">
+                            <button onclick="exportBlocks()" class="btn-export" title="Экспортировать блоки в файл">💾 Экспорт</button>
+                            <button onclick="document.getElementById('importBlocksInput').click()" class="btn-import" title="Импортировать блоки из файла">📁 Импорт</button>
+                            <button onclick="resetToDefaultBlocks()" class="btn-reset" title="Восстановить блоки по умолчанию">🔄 Сбросить</button>
+                        </div>
                     </div>
+                    <input type="file" id="importBlocksInput" accept=".json" style="display: none;" onchange="importBlocks(event)">
                     <div id="adminBlocksList"></div>
                 </div>
             </div>
